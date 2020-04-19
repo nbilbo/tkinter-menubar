@@ -13,8 +13,18 @@ def main():
     #criando os sub-menu
     subMenu=Menu(menubar, tearoff=0)
     menubar.add_cascade(label="File", menu=subMenu)
-    subMenu.add_command(label="New Project")
+
+    #menubar->file->new project
+    subMenuNew=Menu(menubar, tearoff=0)
+    subMenu.add_cascade(label="New Project", menu=subMenuNew)
+    subMenuNew.add_command(label="Python project")
+    subMenuNew.add_command(label="Java project")
+
     subMenu.add_command(label="Exit")
+
+    
+
+    
 
     subMenuHelp=Menu(menubar, tearoff=0)
     menubar.add_cascade(label="Help", menu=subMenuHelp)
