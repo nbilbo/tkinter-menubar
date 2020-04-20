@@ -16,11 +16,13 @@ def main():
 
     #menubar->file->new project
     subMenuNew=Menu(menubar, tearoff=0)
-    subMenu.add_cascade(label="New Project", menu=subMenuNew)
+    subMenu.add_cascade(label="New Project", menu=subMenuNew, state="disable")
     subMenuNew.add_command(label="Python project")
     subMenuNew.add_command(label="Java project")
 
     subMenu.add_command(label="Exit")
+
+    #subMenu.entryconfig("New Project", state="normal")
 
     
 
